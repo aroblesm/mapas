@@ -26,7 +26,7 @@ export class MarkerService {
         const lat = c.geometry.coordinates[1];
         const marker = L.marker([lat, lon]);
 
-        marker.addTo(map);
+        //marker.addTo(map);
       }
     });
   }
@@ -40,11 +40,11 @@ export class MarkerService {
       for (const c of res.features) {
         this.covidService.getJson(c.properties.state).subscribe((res: any) => {
           stateInfo = JSON.parse(JSON.stringify(res));
-          c.properties.cases = stateInfo.todayCases as number;
+          c.properties.cases = stateInfo.active as number;
           const lon = c.geometry.coordinates[0];
           const lat = c.geometry.coordinates[1];
           const circle = L.circleMarker([lat, lon], {
-          radius: MarkerService.scaledRadius(c.properties.cases, maxPop)
+          radius: MarkerService.scaledRadius((c.properties.cases)/100, maxPop)
         });
         circle.bindPopup(this.popupService.makeCapitalPopup(c.properties));
         circle.addTo(map);

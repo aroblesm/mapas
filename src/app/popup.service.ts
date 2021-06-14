@@ -9,6 +9,6 @@ export class PopUpService {
   makeCapitalPopup(data: any): string {
     return `` +
       `<div>State: ${ data.state }</div>` +
-      `<div>Cases: ${ data.cases }</div>`
+      `<div>Active cases: ${ data.cases }</div>`
   }
 }

@@ -21,7 +21,7 @@ export class CovidComponent implements OnInit {
   getCovidData(): void{
     this.covidService.getJson('California').subscribe((res: any) => {
       this.californiaInfo = JSON.parse(JSON.stringify(res));
-      this.california = this.californiaInfo.todayCases
+      this.california = this.californiaInfo.active
       });
   }
 
