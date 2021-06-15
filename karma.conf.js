@@ -7,7 +7,7 @@ const redis = require("redis");
 const app = express();
 
 const redisPort = 6379
-const client = redis.createClient(redisPort);
+const client = redis.createClient({host: '35.232.232.192', port: redisPort});
 
 client.on("error", (err) => {
     console.log(err);
