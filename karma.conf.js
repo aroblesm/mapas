@@ -39,8 +39,8 @@ app.get("/states", (req, res) => {
   }
 });
 
-app.listen(process.env.PORT || 3000, () => {
-    console.log("Node server started");
+app.listen(process.env.PORT || 8148, () => {
+    console.log("Node server started | 8148");
 });
 
 module.exports = function (config) {
