@@ -1,0 +1,36 @@
+/* Estilo italica a descripcion*/
+.content {
+    font-style: italic;
+}
+
+/* Agregar espacio entre boxes de mision, vision background-color: #959fd8; */
+.columns .about {
+    margin-left: 60px;
+}
+
+.descripcion {
+    background-color: #162d59 !important;
+}
+
+/* Agregar espaciado entre renglones de un parrafo en vision y mision */
+.subtitle {
+    line-height: 2;
+}
+
+h2 {
+    color: white;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.is-horizontal-center {
+  justify-content: center;
+}
+.has-image-centered {
+  margin-left: auto;
+  margin-right: auto;
+
+  
+}
